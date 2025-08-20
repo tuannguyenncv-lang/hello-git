@@ -1,0 +1,83 @@
+:root{
+  --bg:#0b0f14;
+  --panel:#111823;
+  --muted:#9fb0c3;
+  --text:#e6edf3;
+  --primary:#4cc2ff;
+  --card:#0f1520;
+  --border:#1e2a3a;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 70% -10%, #123 0%, transparent 60%), var(--bg);
+  line-height:1.6;
+}
+
+a{color:var(--primary); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{width:min(920px,92%); margin-inline:auto}
+
+.header{
+  display:flex; gap:18px; align-items:center;
+  padding:32px 0 16px; border-bottom:1px solid var(--border);
+}
+
+.avatar{
+  width:84px; height:84px; border-radius:50%;
+  object-fit:cover; border:2px solid var(--border); background:#222;
+}
+
+.subtitle{margin:6px 0 8px; color:var(--muted)}
+.meta{display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:14px}
+
+.grid{display:grid; gap:22px; padding:22px 0}
+
+h1{font-size:28px; margin:0}
+h2{font-size:20px; margin:0 0 8px}
+h3{font-size:16px; margin:0}
+
+.tags{display:flex; gap:8px; flex-wrap:wrap; padding:0; list-style:none}
+.tags li{
+  padding:6px 10px; border:1px solid var(--border); border-radius:999px;
+  background:linear-gradient(180deg, #111a28, #0b121d);
+  font-size:14px; color:#cfe6ff;
+}
+
+.card{
+  background:linear-gradient(180deg, #0e1521, #0a111a);
+  border:1px solid var(--border);
+  padding:16px; border-radius:14px; margin:12px 0;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+
+.card-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:6px}
+
+.btn{
+  display:inline-block; padding:8px 12px; border-radius:10px; border:1px solid var(--border);
+  background:linear-gradient(180deg,#132233,#0b1522);
+  text-decoration:none; font-size:14px
+}
+.btn[aria-disabled="true"]{opacity:.5; pointer-events:none}
+
+.bullets{margin:8px 0 0 18px}
+
+.timeline{display:grid; gap:14px}
+.time{color:var(--muted); font-size:13px}
+
+.footer{
+  padding:22px 0 40px; color:var(--muted); border-top:1px solid var(--border);
+  margin-top:18px; font-size:14px; text-align:center;
+}
+
+/* Responsive */
+@media (max-width:600px){
+  .header{flex-direction:column; align-items:flex-start}
+  .avatar{width:72px; height:72px}
+}
